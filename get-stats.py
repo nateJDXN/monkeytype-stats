@@ -76,3 +76,41 @@ if pb60:
 else:
     print("\n60 second PB: No data available")
 
+
+new_content = """
+<div align="center">
+
+
+| | 15 seconds   |      30 seconds      |  60 seconds |
+|:------          |:----------:|:-------------:|------:|
+|**WPM**            |{pb30['wpm']}|0|0|
+|**Accuracy**       |0|0|0|
+|**Difficulty**     |0|0|0|
+
+</div>
+
+"""
+
+# Update README with new MT stats
+
+with open('README.md', 'r', encoding='utf-8') as file:
+    content = file.read()
+
+start = f"<!--- START --->"
+end = f"<!--- END --->"
+
+start_index = content.find(start)
+end_index = content.find(end)
+
+if start_index == -1  or end_index == -1:
+    raise ValueError(f"Section not found in file")
+
+    # Calculate positions after start marker and before end marker
+    start_pos = start_index + len(start)
+
+    # Replace the section content
+    updated = (content[:start] + f"\n{new_content}\n" + content[end_idx:])
+
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(updated)
+

@@ -17,10 +17,14 @@
 <a href="https://nathandixon.dev">nathandixon.dev</a>
 
 <h3 align="center">MonkeyType Stats</h3>
+Tests completed: 
 
 ----------------------
 
+<!--- START --->
+
 <div align="center">
+
 
 | | 15 seconds   |      30 seconds      |  60 seconds |
 |:------          |:----------:|:-------------:|------:|
@@ -29,3 +33,4 @@
 |**Difficulty**     |0|0|0|
 
 </div>
+<!--- END --->
