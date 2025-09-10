@@ -26,7 +26,7 @@ jobs:
 
 			- name: Run Python Script
 				env: 
-					MONKEYTYPE_API_KEY: ${{ .env.MONKEYTYPE_API_KEY }}
+					MONKEYTYPE_API_KEY: ${{ secrets.MONKEYTYPE_API_KEY }}
 				run: python get-stats.py
 
 			- name: Push Changes
