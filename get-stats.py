@@ -49,34 +49,13 @@ def get_personal_best(mode, mode2, duration):
         'wpm': entry['wpm']
     }
 
+# get personal bests for each category
 pb15 = get_personal_best('time', '15', '15s')
 pb30 = get_personal_best('time', '30', '30s')
 pb60 = get_personal_best('time', '60', '60s')
 
-print(f"Completed: {completed_tests}")
 
-if pb15:
-    print(f"\n15 second PB")
-    print(f"WPM: {pb15['wpm']}")
-    print(f"Accuracy: {pb15['accuracy']}%")
-else:
-    print("\n15 second PB: No data available")
-
-if pb30:
-    print(f"\n30 second PB")
-    print(f"WPM: {pb30['wpm']}")
-    print(f"Accuracy: {pb30['accuracy']}%")
-else:
-    print("\n30 second PB: No data available")
-
-if pb60:
-    print(f"\n60 second PB")
-    print(f"WPM: {pb60['wpm']}")
-    print(f"Accuracy: {pb60['accuracy']}%")
-else:
-    print("\n60 second PB: No data available")
-
-
+# Create new stats table based on updated stats
 new_content = f"""
 <div align="center">
 ### Tests completed: {completed_tests}
