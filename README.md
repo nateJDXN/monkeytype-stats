@@ -37,3 +37,6 @@
 </div>
 
 <!--- END --->
+<div align="center">
+(Check out how I made this tool <a href="https://github.com/nateJDXN/monkeytype-stats">here</a>!)
+</div>
