@@ -77,18 +77,19 @@ else:
     print("\n60 second PB: No data available")
 
 
-new_content = """
+new_content = f"""
 <div align="center">
+### Tests completed: {completed_tests}
 
+### Personal Bests:
 
 | | 15 seconds   |      30 seconds      |  60 seconds |
 |:------          |:----------:|:-------------:|------:|
-|**WPM**            |{pb30['wpm']}|0|0|
-|**Accuracy**       |0|0|0|
+|**WPM**            |{pb15['wpm']}|{pb30['wpm']}|{pb60['wpm']}|
+|**Accuracy**       |{pb15['accuracy']}%|{pb30['accuracy']}%|{pb60['accuracy']}%|
 |**Difficulty**     |0|0|0|
 
 </div>
-
 """
 
 # Update README with new MT stats
@@ -105,12 +106,11 @@ end_index = content.find(end)
 if start_index == -1  or end_index == -1:
     raise ValueError(f"Section not found in file")
 
-    # Calculate positions after start marker and before end marker
-    start_pos = start_index + len(start)
+# Calculate positions after start marker and before end marker
+start = start_index + len(start)
 
-    # Replace the section content
-    updated = (content[:start] + f"\n{new_content}\n" + content[end_idx:])
+# Replace the section content
+updated = (content[:start] + f"\n{new_content}\n" + content[end_index:])
 
-    with open(file_path, 'w', encoding='utf-8') as file:
-        file.write(updated)
-
+with open("README.md", 'w', encoding='utf-8') as file:
+    file.write(updated)

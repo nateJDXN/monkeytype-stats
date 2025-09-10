@@ -16,21 +16,24 @@
 <br>
 <a href="https://nathandixon.dev">nathandixon.dev</a>
 
-<h3 align="center">MonkeyType Stats</h3>
-Tests completed: 
-
-----------------------
+<h2 align="center">MonkeyType Stats</h2>
 
 <!--- START --->
 
+### Tests completed: 3
+
+----------------------
+
 <div align="center">
 
+### Personal Bests:
 
 | | 15 seconds   |      30 seconds      |  60 seconds |
 |:------          |:----------:|:-------------:|------:|
-|**WPM**            |0|0|0|
-|**Accuracy**       |0|0|0|
+|**WPM**            |115.91|94.4|96.4|
+|**Accuracy**       |100%|97.53%|97.01%|
 |**Difficulty**     |0|0|0|
 
 </div>
+
 <!--- END --->
