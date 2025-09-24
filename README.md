@@ -1,39 +1,52 @@
-<h1 align="center">Hey, I'm Nate! 👋</h1>
-<h3 align="center">I am a fourth year Computer Science major at The George Washington University</h3>
+# MonkeyType Stats
 
-- 🔭 I'm currently researching the impact of implementing TinyML in distributed systems. Our research team wants to make AI tools more accessible, secure, and sustainable! 🌱 More information coming soon!
+Welcome to the MonkeyType Stats project! This tool fetches and displays your typing statistics from the MonkeyType API on your GitHub README.
 
-- 🪐 I enjoy working with **Java and Python** and I am learning about **Kubernetes, distributed systems, and NAS systems**. 
+## Project Overview
 
-- 📫 You can reach me at **njdixon23@gmail.com**
+The primary goal of this project is to automate the retrieval of typing statistics from the MonkeyType platform and update them in a structured format within the README file. It also served as a project to play with GitHub Actions. 
 
-----------------------
+## Features
 
-<h3 align="left">Find me here!</h3>
-<a href="https://linkedin.com/in/nat3dixon" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nat3dixon" height="30" width="40" /></a>
+- **Fetch Typing Statistics**: Automatically retrieves the number of completed tests and personal bests for 15, 30, and 60-second typing tests.
+- **Display Personal Bests**: Shows your Words Per Minute (WPM), accuracy, and difficulty level for each test duration.
+- **Automated README Update**: Updates the README file with the latest statistics, ensuring your progress is always up-to-date.
 
-<br>
-<br>
-<a href="https://nathandixon.dev">nathandixon.dev</a>
+## Roadmap
 
-<h2 align="center">MonkeyType Stats</h2>
+- [x] Add cron job to schedule commits
+- [ ] Add option to use embedded tool
 
-<!--- START --->
+## Setup Instructions
 
-<div align="center">
-### Tests completed: 19
+1. **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/yourusername/monkeytype-stats.git
+   cd monkeytype-stats
+   ```
 
-### Personal Bests:
+2. **Install Dependencies**: 
+   Ensure you have Python installed. Then, install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-| | 15 seconds   |      30 seconds      |  60 seconds |
-|:------          |:----------:|:-------------:|------:|
-|**WPM**            |115.91|102.39|96.4|
-|**Accuracy**       |100%|95.36%|97.01%|
-|**Difficulty**     |0|0|0|
+3. **Environment Variables**: 
+   Create a `.env` file in the root directory and add your MonkeyType API key:
+   ```
+   MONKEYTYPE_API_KEY=your_api_key_here
+   ```
 
-</div>
+4. **Add Markdown markers**
+    
+    Add `<!--- START --->` and `<!--- END --->` to your README where you want the add-on to live.
 
-<!--- END --->
-<div align="center">
-(Check out how I made this tool <a href="https://github.com/nateJDXN/monkeytype-stats">here</a>!)
-</div>
+5. **Run the Script**: 
+   Execute the script to fetch and update your stats:
+   ```bash
+   python get-stats.py
+   ```
+
+## Notes
+
+This repo can serve as a template for your own README. I would recommend checking out the official [documentation](https://docs.github.com/en/account-and-profile/how-tos/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) to learn how to create your own README. 
